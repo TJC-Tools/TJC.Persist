@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- **PersistManager** for managing persist objects
+- **IPersistObject** for marking an object as persistent
+
 ## [0.1.0] - 2025-06-12
 
 [Unreleased]: https://github.com/TJC-Tools/TJC.Persist/compare/v0.1.0...HEAD

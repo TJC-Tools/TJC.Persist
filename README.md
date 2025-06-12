@@ -9,7 +9,7 @@
 [![License](https://img.shields.io/github/license/TJC-Tools/TJC.Persist.svg)](LICENSE)
 
 [![tests](https://github.com/TJC-Tools/TJC.Persist/actions/workflows/ct-matrix.yml/badge.svg)](https://github.com/TJC-Tools/TJC.Persist/actions/workflows/ct-matrix.yml)
-[![codecov](https://codecov.io/gh/TJC-Tools/TJC.Persist/graph/badge.svg?token=b5c45033-df31-4ef5-bc8e-3f4076d7f620)](https://codecov.io/gh/TJC-Tools/TJC.Persist)
+[![codecov](https://codecov.io/gh/TJC-Tools/TJC.Persist/graph/badge.svg?token=xczbFnLpZJ)](https://codecov.io/gh/TJC-Tools/TJC.Persist)
 
 ## Documentation
 - [Changelog](CHANGELOG.md)
