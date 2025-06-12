@@ -3,6 +3,4 @@
 /// <summary>
 /// Allow object to use <see cref="PersistManager"/> methods
 /// </summary>
-public interface IPersistObject
-{
-}
+public interface IPersistObject { }
