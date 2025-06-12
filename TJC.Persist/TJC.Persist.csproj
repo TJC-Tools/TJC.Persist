@@ -27,21 +27,16 @@
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
-    <None Include="..\LICENSE">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-    <EmbeddedResource Include="..\LICENSE" />
   </ItemGroup>
   <!-- DEPENDENCIES -->
-  <ItemGroup>
-    <!-- N/A -->
-  </ItemGroup>
   <!-- TESTS -->
   <ItemGroup>
     <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
       <_Parameter1>TJC.Persist.Tests</_Parameter1>
     </AssemblyAttribute>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="TJC.Singleton" Version="0.5.6" />
   </ItemGroup>
   <!-- TASKS -->
   <UsingTask TaskName="ReadFileContent" TaskFactory="RoslynCodeTaskFactory" AssemblyName="Microsoft.Build.Tasks.Core">
