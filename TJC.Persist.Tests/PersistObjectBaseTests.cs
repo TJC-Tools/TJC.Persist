@@ -5,16 +5,13 @@ namespace TJC.Persist.Tests;
 [TestClass]
 public class PersistObjectBaseTests : TestBase
 {
-    private const string ExamplePersistObjectSerialized = "{\"Type\":\"ExamplePersistObject\",\"Payload\":{\"Name\":\"Test\",\"Value\":5}}";
+    private const string ExamplePersistObjectSerialized =
+        "{\"Type\":\"ExamplePersistObject\",\"Payload\":{\"Name\":\"Test\",\"Value\":5}}";
 
     [TestMethod]
     public void SerializeExamplePersistObject()
     {
-        var example = new ExamplePersistObject
-        {
-            Name = "Test",
-            Value = 5
-        };
+        var example = new ExamplePersistObject { Name = "Test", Value = 5 };
 
         var result = PersistManager.Serialize(example);
 
