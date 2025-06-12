@@ -48,7 +48,9 @@ internal static class PersistTypeRegistry
             throw new InvalidOperationException($"Type name '{type.Name}' is abstract.");
 
         if (!_persistObjectBaseType.IsAssignableFrom(type))
-            throw new InvalidOperationException($"Type name '{type.Name}' does not inherit from '{nameof(IPersistObject)}'.");
+            throw new InvalidOperationException(
+                $"Type name '{type.Name}' does not inherit from '{nameof(IPersistObject)}'."
+            );
 
         if (_nameToType.ContainsKey(type.Name))
             throw new InvalidOperationException($"Type name '{type.Name}' is already registered.");
