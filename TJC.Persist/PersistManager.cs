@@ -12,7 +12,7 @@ public class PersistManager : SingletonBase<PersistManager>
 {
     private static readonly JsonSerializerOptions SerializerOptions = new()
     {
-        WriteIndented = false
+        WriteIndented = false,
     };
 
     /// <summary>
@@ -54,7 +54,7 @@ public class PersistManager : SingletonBase<PersistManager>
         var wrapper = new PersistWrapper()
         {
             Type = PersistTypeRegistry.GetName(type),
-            Payload = payload
+            Payload = payload,
         };
         return JsonSerializer.Serialize(wrapper, SerializerOptions);
     }
