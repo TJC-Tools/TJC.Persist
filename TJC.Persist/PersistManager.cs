@@ -16,7 +16,7 @@ public class PersistManager : SingletonBase<PersistManager>
     };
 
     /// <summary>
-    /// Instatiate singleton
+    /// Instantiate singleton
     /// </summary>
     protected PersistManager()
     {
