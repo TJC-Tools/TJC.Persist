@@ -2,7 +2,6 @@ using TJC.Persist.Tests.Mocks;
 
 namespace TJC.Persist.Tests;
 
-
 public class PersistObjectBaseTests : TestBase
 {
     private const string ExamplePersistObjectSerialized =
@@ -23,7 +22,7 @@ public class PersistObjectBaseTests : TestBase
     {
         var result = PersistManager.Deserialize(ExamplePersistObjectSerialized);
 
-        Assert.IsType(typeof(ExamplePersistObject), result);
+        Assert.IsType<ExamplePersistObject>(result);
 
         var example = (ExamplePersistObject)result;
 

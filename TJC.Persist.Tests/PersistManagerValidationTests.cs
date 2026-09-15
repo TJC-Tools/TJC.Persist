@@ -4,7 +4,6 @@ using TJC.Persist.Tests.Mocks;
 
 namespace TJC.Persist.Tests;
 
-
 public class PersistManagerValidationTests : TestBase
 {
     [Fact]
@@ -12,8 +11,14 @@ public class PersistManagerValidationTests : TestBase
     {
         PersistManager.RegisterAllFromAssembly(Assembly.GetExecutingAssembly());
 
-        Assert.Equal(typeof(ExamplePersistObject), PersistTypeRegistry.GetTypeByName("ExamplePersistObject"));
-        Assert.Equal("ExamplePersistObject", PersistTypeRegistry.GetName(typeof(ExamplePersistObject)));
+        Assert.Equal(
+            typeof(ExamplePersistObject),
+            PersistTypeRegistry.GetTypeByName("ExamplePersistObject")
+        );
+        Assert.Equal(
+            "ExamplePersistObject",
+            PersistTypeRegistry.GetName(typeof(ExamplePersistObject))
+        );
     }
 
     [Fact]
@@ -25,22 +30,22 @@ public class PersistManagerValidationTests : TestBase
     [Fact]
     public void Registry_UnknownEntries_ThrowInvalidOperationException()
     {
-        Assert.Throws<InvalidOperationException>(
-            () => PersistTypeRegistry.GetTypeByName("MissingPersistType")
+        Assert.Throws<InvalidOperationException>(() =>
+            PersistTypeRegistry.GetTypeByName("MissingPersistType")
         );
-        Assert.Throws<InvalidOperationException>(
-            () => PersistTypeRegistry.GetName(typeof(PersistManagerValidationTests))
+        Assert.Throws<InvalidOperationException>(() =>
+            PersistTypeRegistry.GetName(typeof(PersistManagerValidationTests))
         );
     }
 
     [Fact]
     public void Deserialize_InvalidWrapper_ThrowsInvalidOperationException()
     {
-        Assert.Throws<InvalidOperationException>(
-            () => PersistManager.Deserialize("{\"Type\":\"\",\"Payload\":{}}")
+        Assert.Throws<InvalidOperationException>(() =>
+            PersistManager.Deserialize("{\"Type\":\"\",\"Payload\":{}}")
         );
-        Assert.Throws<InvalidOperationException>(
-            () => PersistManager.Deserialize("{\"Type\":\"Unknown\",\"Payload\":{}}")
+        Assert.Throws<InvalidOperationException>(() =>
+            PersistManager.Deserialize("{\"Type\":\"Unknown\",\"Payload\":{}}")
         );
     }
 }
