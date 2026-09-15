@@ -1,4 +1,4 @@
-﻿namespace TJC.Persist;
+namespace TJC.Persist;
 
 /// <summary>
 /// Allow object to use <see cref="PersistManager"/> methods

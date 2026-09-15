@@ -7,9 +7,7 @@ namespace TJC.Persist.Tests;
 public class TestBase
 {
     private static bool _initialized;
-
-    [TestInitialize]
-    public void Initialize()
+    public TestBase()
     {
         if (_initialized)
             return;

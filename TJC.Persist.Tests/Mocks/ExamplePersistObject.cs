@@ -1,4 +1,4 @@
-﻿namespace TJC.Persist.Tests.Mocks;
+namespace TJC.Persist.Tests.Mocks;
 
 internal class ExamplePersistObject : IPersistObject
 {
